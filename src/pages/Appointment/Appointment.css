@@ -1,0 +1,66 @@
+.appointment-container {
+  margin-top: 50px;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.appointment-form {
+  margin-top: 20px;
+}
+
+.form-label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.appointment-calendar-col {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.calendar-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  height: 300px; /* Increase height */
+}
+
+button {
+  margin-top: 10px;
+}
+
+button + button {
+  margin-left: 10px;
+}
+
+.appointment-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.appointment-details > div {
+  flex: 1;
+  min-width: 300px;
+}
+
+@media (max-width: 768px) {
+  .appointment-details {
+    flex-direction: column;
+  }
+}
+.appointment-container .form-label {
+  text-align: left;
+  display: block;
+}
+
+.appointment-container .ant-col {
+  text-align: left;
+}

@@ -1,0 +1,64 @@
+.weekly-schedule {
+  width: 100%;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.schedule-table {
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+.ant-table-thead > tr > th {
+  background-color: #f5f5f5;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.ant-table-tbody > tr > td {
+  text-align: center;
+  padding: 10px;
+}
+
+.cell {
+  width: 100%;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  transition: background-color 0.3s ease;
+}
+
+.available {
+  background-color: cornflowerblue;
+  color: white;
+}
+
+.unavailable {
+  background-color: white;
+}
+
+.selected {
+  background-color: green !important;
+  color: white;
+}
+
+.ant-table-thead th {
+  white-space: nowrap;
+  padding: 12px;
+}
+
+@media (max-width: 768px) {
+  .weekly-schedule {
+    padding: 10px;
+  }
+
+  .schedule-table .ant-table-thead th,
+  .schedule-table .ant-table-tbody td {
+    padding: 6px;
+    font-size: 12px;
+  }
+}
