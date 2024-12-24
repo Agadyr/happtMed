@@ -5,11 +5,11 @@ import { AppSuspense } from '../../../shared/components/AppSuspense/AppSuspense'
 import { AuthLayout } from '../../../shared/layouts/AuthLayout/AuthLayout';
 import { Login } from '../../../pages/Login/Login';
 import { Registration } from '../../../pages/Registration/Registration';
-import Forget from "../../../pages/Forget/Forget";
 import ResetPassword from "../../../pages/ResetPassword/ResetPassword";
 import RegistrationAdmin from '../../../pages/RegistrationAdmin/RegistrationAdmin';
 import Payment from '../../../pages/Payment/Payment';
 import Support from '../../../pages/Support/Support';
+import Forget from '../../../pages/Forget/Forget';
 
 
 export const publicRoutes = [
