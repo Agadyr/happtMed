@@ -119,7 +119,7 @@ export const Appointment = () => {
   return (
     <div className="appointment-container">
       <Row justify="center">
-        <Col className='appointment-col' xs={24} sm={20} md={16} lg={12}>
+        <Col className='appointment-col' xs={24} sm={20} md={16} >
           {selectedDoctor && (
             <Button
               ghost
@@ -195,8 +195,8 @@ export const Appointment = () => {
                 </>
               )}
               {selectedDoctor && (
-                <Row gutter={[16, 24]}>
-                  <Col xs={24} md={12} style={{ textAlign: 'left' }}>
+                <Col style={{display: 'flex',}}>
+                  <Col md={8} style={{ textAlign: 'left' }}>
                     <Text strong className="form-label">Type of Appointment</Text>
                     <Controller
                       name="appointmentType"
@@ -231,10 +231,10 @@ export const Appointment = () => {
                       Proceed to Payment
                     </Button>
                   </Col>
-                  <Col xs={24} md={12} style={{ paddingLeft: '40px' }}>
+                  <Col xs={20}  style={{ paddingLeft: '40px' }}>
                     <Sender emailOfDoctor={selectedDoctor.email} onSend={handleSend} />
                   </Col>
-                </Row>
+                </Col>
               )}
             </Row>
           </form>
