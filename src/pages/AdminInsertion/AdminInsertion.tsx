@@ -14,7 +14,7 @@ const AdminInsertion = () => {
   //   return null;
   // }
   
-  const { control, handleSubmit, formState: { errors }, reset, watch } = useForm();
+  const { control, handleSubmit, formState: { errors }, reset, watch } = useForm({ mode: 'onChange' });
   const role = watch('role', 'patient');
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [newUserInfo, setNewUserInfo] = useState({ email: '', password: '' });
@@ -80,11 +80,23 @@ const AdminInsertion = () => {
 
           <Form.Item label="Email">
             <Controller
-              name="email"
-              control={control}
-              rules={{ required: 'Please input a valid email!', pattern: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/ }}
-              render={({ field }) => <Input {...field} />}
-            />
+                  name="email"
+                  control={control}
+                  rules={{
+                    required: 'Please enter your email',
+                    pattern: {
+                      value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                      message: 'Please enter a valid email address',
+                    },
+                  }}
+                  render={({ field }) => (
+                    <Input
+                      {...field}
+                      placeholder="Enter email"
+                      className="controller"
+                    />
+                  )}
+                />
             {errors.email && <span className="error">{errors.email.message}</span>}
           </Form.Item>
 

@@ -20,7 +20,6 @@ const RegistrationAdmin = () => {
   const {
     control,
     handleSubmit,
-    setValue,
     watch,
     formState: { errors },
   } = useForm<FormData>({ mode: 'onChange' });
