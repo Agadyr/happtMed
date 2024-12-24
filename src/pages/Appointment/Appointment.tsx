@@ -119,7 +119,7 @@ export const Appointment = () => {
   return (
     <div className="appointment-container">
       <Row justify="center">
-        <Col xs={24} sm={20} md={16} lg={12}>
+        <Col className='appointment-col' xs={24} sm={20} md={16} lg={12}>
           {selectedDoctor && (
             <Button
               ghost
