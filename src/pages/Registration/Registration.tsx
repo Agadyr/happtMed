@@ -37,7 +37,7 @@ export const Registration = () => {
         }
       }
 
-      const response = await axios.post('https://happymed.work.gd/register', formData, {
+      const response = await axios.post('https://swe-xy4l.onrender.com/register', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

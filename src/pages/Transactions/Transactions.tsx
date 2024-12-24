@@ -26,7 +26,7 @@ const Transactions = () => {
     if (storedUser) {
       try {
         const parsedUser = JSON.parse(storedUser);
-        const response = await axios.get(`https://happymed.work.gd/get_balance`, {
+        const response = await axios.get(`https://swe-xy4l.onrender.com/get_balance`, {
           params: { email: parsedUser.email },
         });
         if (response.status === 200) {
@@ -47,7 +47,7 @@ const Transactions = () => {
       try {
         const parsedUser = JSON.parse(storedUser);
 
-        const response = await axios.get(`https://happymed.work.gd/get_transactions`, {
+        const response = await axios.get(`https://swe-xy4l.onrender.com/get_transactions`, {
           params: { patient_id: parsedUser.patient_id },
         });
         if (response.status === 200) {

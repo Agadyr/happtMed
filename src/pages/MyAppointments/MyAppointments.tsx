@@ -57,7 +57,7 @@ export const MyAppointments: React.FC = () => {
 
   const fetchAppointments = async (email: string) => {
     try {
-      const response = await axios.get(`https://happymed.work.gd/get_appointments_for_doctor?email=${email}`);
+      const response = await axios.get(`https://swe-xy4l.onrender.com/get_appointments_for_doctor?email=${email}`);
       if (response.status === 200) {
         setAppointments(response.data.appointments);
       } else {
@@ -73,7 +73,7 @@ export const MyAppointments: React.FC = () => {
     if (!selectedAppointmentId) return;
 
     try {
-      const response = await axios.put(`https://happymed.work.gd/${selectedAppointmentId}`, {
+      const response = await axios.put(`https://swe-xy4l.onrender.com/${selectedAppointmentId}`, {
         feedback: values.feedback,
         diagnosis: values.diagnosis,
       });
@@ -95,7 +95,7 @@ export const MyAppointments: React.FC = () => {
     if (!selectedAppointmentId) return;
 
     try {
-      const response = await axios.post('https://happymed.work.gd/cancel_appointment_by_doctor', {
+      const response = await axios.post('https://swe-xy4l.onrender.com/cancel_appointment_by_doctor', {
         appointment_id: selectedAppointmentId,
         cause: cancelReason,
       });
@@ -130,7 +130,7 @@ export const MyAppointments: React.FC = () => {
       setSelectedAppointmentId(appointmentId);
   
       // Fetch diagnosis and feedback
-      const response = await axios.get(`https://happymed.work.gd/feedback/${appointmentId}`);
+      const response = await axios.get(`https://swe-xy4l.onrender.com/feedback/${appointmentId}`);
       if (response.status === 200) {
         const { diagnosis, feedback } = response.data;
   

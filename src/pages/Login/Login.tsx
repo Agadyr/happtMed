@@ -29,7 +29,7 @@ export const Login = () => {
   const onSubmit = async (data) => {
     console.log(data);
     try {
-      const response = await axios.post('https://happymed.work.gd/login', data);
+      const response = await axios.post('https://swe-xy4l.onrender.com/login', data);
       console.log('Login response:', response.data);
   
       if (response.data.status === 'success') {

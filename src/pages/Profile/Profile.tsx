@@ -95,7 +95,7 @@ export const Profile = () => {
         const endpoint = user.role === 'doctor' ? 'edit_doctor_profile' : 'edit_patient_profile';
 
         const response = await axios.put(
-          `https://happymed.work.gd/${endpoint}`,
+          `https://swe-xy4l.onrender.com/${endpoint}`,
           updatedData,
           {
             headers: {

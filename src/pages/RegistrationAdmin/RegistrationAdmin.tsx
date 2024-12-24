@@ -36,7 +36,7 @@ const RegistrationAdmin = () => {
     }
 
     try {
-      const response = await axios.post('https://happymed.work.gd/register_admin', data, {
+      const response = await axios.post('https://swe-xy4l.onrender.com/register_admin', data, {
         headers: {
           'Content-Type': 'application/json',
         },
@@ -62,7 +62,7 @@ const RegistrationAdmin = () => {
     setVerifying(true);
     try {
       const response = await axios.get(
-        `https://happymed.work.gd/verify_id?identificationNumber=${idNumber}`
+        `https://swe-xy4l.onrender.com/verify_id?identificationNumber=${idNumber}`
       );
 
       if (response.data.status === 'verified') {

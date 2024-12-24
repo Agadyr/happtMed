@@ -38,7 +38,7 @@ const MedicalHistory: React.FC = () => {
     if (storedUser) {
       try {
         const parsedUser = JSON.parse(storedUser);
-        const response = await axios.get(`https://happymed.work.gd/get_medhistory`, {
+        const response = await axios.get(`https://swe-xy4l.onrender.com/get_medhistory`, {
           params: { email: parsedUser.email },
         });
         if (response.status === 200) {

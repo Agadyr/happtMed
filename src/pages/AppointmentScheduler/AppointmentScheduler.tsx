@@ -58,7 +58,7 @@ const AppointmentScheduler = ({ doctorEmail }) => {
     try {
       // Submit the appointmentData as JSON
       const response = await axios.post(
-        'https://happymed.work.gd/make_appointment',
+        'https://swe-xy4l.onrender.com/make_appointment',
         appointmentData,
         {
           headers: {

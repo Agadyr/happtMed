@@ -139,7 +139,7 @@ const handlePrintReceipt = () => {
     //   );
     try {
       const response = await axios.post(
-        'https://happymed.work.gd/make_appointment', // Changed endpoint to make_payment
+        'https://swe-xy4l.onrender.com/make_appointment', // Changed endpoint to make_payment
         {
           ...appointmentData,
           // paymentSum,
